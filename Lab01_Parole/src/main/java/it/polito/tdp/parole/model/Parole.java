@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Parole {
 	
-	Map<String, String> mappaParole = new TreeMap<String, String>();
+	//Map<String, String> mappaParole = new TreeMap<String, String>();
 	LinkedList<String> listaParole = new LinkedList<String>();
 	
 	public Parole() {
@@ -13,16 +13,19 @@ public class Parole {
 	
 	public void addParola(String p) {
 		listaParole.add(p);
-		mappaParole.put(p, p);
+		//mappaParole.put(p, p);
 	}
 	
 	public List<String> getElenco() {
-		LinkedList<String> elencoParole = new LinkedList<String>(mappaParole.keySet());
+		//LinkedList<String> elencoParole = new LinkedList<String>(mappaParole.keySet());
+		LinkedList<String> elencoParole = new LinkedList<String>(listaParole);
+		Collections.sort(listaParole, new ComparatoreAlfabetico());
 		return elencoParole;
 	}
 	
 	public void reset() {
-		mappaParole.clear();
+		//mappaParole.clear();
+		listaParole.clear();
 	}
 
 }
