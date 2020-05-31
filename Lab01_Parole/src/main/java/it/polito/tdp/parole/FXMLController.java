@@ -37,11 +37,12 @@ public class FXMLController {
     	// Prendi la parola creata e la aggiungi alla lista
     	String parola = txtParola.getText();
     	elenco.addParola(parola);
+    	//txtResult.clear();
     	String lista = "";
     	for (String s : elenco.getElenco())
     		lista += s+"\n";
     	
-    	txtResult.appendText(lista);
+    	txtResult.setText(lista);
     }
 
     @FXML

@@ -19,7 +19,7 @@ public class Parole {
 	public List<String> getElenco() {
 		//LinkedList<String> elencoParole = new LinkedList<String>(mappaParole.keySet());
 		LinkedList<String> elencoParole = new LinkedList<String>(listaParole);
-		Collections.sort(listaParole, new ComparatoreAlfabetico());
+		Collections.sort(elencoParole, new ComparatoreAlfabetico());
 		return elencoParole;
 	}
 	
